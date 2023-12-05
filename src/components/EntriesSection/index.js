@@ -48,7 +48,10 @@ export default function EntriesSection() {
       </Tabs>
       <div className="entries-section__entries">
         {entries.map(({ id, date, motto, notes }) => (
-          <Entry key={id} date={date} motto={motto} notes={notes} />
+          <>
+            <Entry key={id} date={date} motto={motto} notes={notes} />
+            <Divider />
+          </>
         ))}
       </div>
     </section>
